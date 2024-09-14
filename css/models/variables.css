@@ -1,0 +1,16 @@
+@import url('./tipografias.css');
+
+:root {
+    --ff_titulo: 'Patrick Hand', 'Nunito', 'Open Sans', Arial, Helvetica, cursive, sans-serif, serif;
+    --ff_subtitulo-general: 'Nunito', 'Open Sans', Arial, Helvetica, sans-serif, serif;
+    --ff_estandar: Arial, Helvetica, sans-serif;
+    --fs_text: 16px;
+    --cursor_pointer: pointer;
+    --sz_letraPequenya: 12px;
+    --sz_letraMediana: 14px;
+    --sz_letraSemigrande: 18px;
+    --sz_letraGrande: 20px;
+    --sz_letraSubtitulo: 26px;
+    --sz_letraTitulo: 36px;
+    --color_texto1: #eaeded;
+}

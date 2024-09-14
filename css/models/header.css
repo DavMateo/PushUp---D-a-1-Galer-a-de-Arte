@@ -1,0 +1,84 @@
+/* IMPORTANDO LOS ARCHIVOS NECESARIOS */
+@import url('./essentials.css');
+@import url('./variables.css');
+
+.encabezado {
+    display: flex;
+    height: 100vh;
+    background-image: url('./../../assets/jpg/fondoPrincipal.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: var(--color_texto1);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .45);
+    }
+
+    & .encabezadoContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        max-height: 7rem;
+        padding: 3.75rem 2.5rem;
+        background-color: rgba(255, 255, 255, .2);
+        z-index: 100;
+        backdrop-filter: blur(8px);
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+
+        & .titulo {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            & .titulo__imagen {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            & .titulo__texto {
+                font-family: var(--ff_titulo);
+                letter-spacing: 2px;
+                text-transform: capitalize;
+            }
+        }
+
+        & .navbar {
+            & .navbar__container {
+                font-family: var(--ff_subtitulo-general);
+                cursor: var(--cursor_pointer);
+
+                & .navbarContainer__links {
+                    display: flex;
+                    gap: 1.65rem;
+                    list-style-type: none;
+
+                    & .navbarContainer__btnLink {
+                        font-weight: 600;
+                        font-size: var(--sz_letraSemigrande);
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, .75);
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    & .navbarContainer__btnLink--active {
+                        color: #8ECAE6;
+                        transform: scale(1.2);
+                        margin-right: .4rem;
+                        text-shadow: 0 0 7px rgba(0, 0, 0, .75);
+                    }
+                }
+            }
+        }
+    }
+}

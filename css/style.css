@@ -1,0 +1,15 @@
+/* IMPORTANDO LOS ARCHIVOS NECESARIOS */
+@import url('./models/variables.css');
+@import url('./models/header.css');
+@import url('./models/footer.css');
+@import url('./animations/animPagPrincipal.css');
+@import url('./responsive/small_mobile.css');
+@import url('./responsive/medium_mobile.css');
+@import url('./responsive/large_mobile.css');
+@import url('./responsive/small_tablet.css');
+@import url('./responsive/standar_tablet.css');
+@import url('./responsive/desktop_devices.css');
+@import url('./responsive/large_display.css');
+
+
+/* CÓDIGO PRINCIPAL */
