@@ -4,6 +4,7 @@
 
 .encabezado {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     background-image: url('./../../assets/jpg/fondoPrincipal.jpg');
     background-repeat: no-repeat;
@@ -18,7 +19,7 @@
         top: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, .45);
+        background-color: rgba(0, 0, 0, .65);
     }
 
     & .encabezadoContainer {
@@ -78,6 +79,173 @@
                         text-shadow: 0 0 7px rgba(0, 0, 0, .75);
                     }
                 }
+            }
+        }
+    }
+
+    & .contentInfo {
+        display: grid;
+        width: 100vw;
+        height: calc(100vh - 7rem);
+        grid-template-areas: 
+            "info info info info info info imgs imgs imgs imgs"
+            "info info info info info info imgs imgs imgs imgs"
+            "info info info info info info imgs imgs imgs imgs"
+            "info info info info info info imgs imgs imgs imgs"
+            "info info info info info info imgs imgs imgs imgs"
+            "info info info info info info imgs imgs imgs imgs"
+        ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        z-index: 1000;
+        padding: 0 2.5rem;
+        justify-content: space-between;
+
+        & .infoContainer {
+            display: flex;
+            flex-direction: column;
+            width: 45vw;
+            height: calc(100vh - 7rem - 10px);
+            grid-area: info;
+            justify-content: center;
+    
+            & .infoContainer__presentacion {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: baseline;
+                gap: 1rem;
+                max-width: 45vw;
+    
+                & .infoContPresentacion__titulo {
+                    font-size: 44px;
+                    font-weight: 700;
+                    font-family: var(--ff_titulo);
+                    letter-spacing: 2px;
+                }
+    
+                & .infoContPresentacion__texto {
+                    font-size: var(--sz_letraSemigrande);
+                    font-weight: 500;
+                    font-family: var(--ff_subtitulo-general);
+                }
+            }
+    
+            & .infoContainer__botones {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                gap: 1.5rem;
+                max-width: 45vw;
+                padding-top: 1.7rem;
+    
+                & .infoContainer__btnVisita {
+                    display: flex;
+                    width: 14rem;
+                    height: 3rem;
+                    background-color: #073a47;
+                    border-radius: 40px;
+                    box-shadow: 0px 5px 10px var(--color_negro);
+                    align-items: center;
+                    border: none;
+                    cursor: pointer;
+                    padding-left: .85rem;
+                    gap: .5rem;
+    
+                    & .btnVisita__texto {
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: var(--fs_text);
+                        letter-spacing: 1.2px;
+                    }
+    
+                    & .btnVisita__iconContainer {
+                        width: 45px;
+                        height: 45px;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        border: 3px solid #073a47;
+    
+                        & .btnVisita__svgIcon {
+                            transition-duration: 1.5s;
+                            animation: arrow 1s linear infinite;
+                        }
+                    }
+    
+                    &:hover {
+                        transition-duration: .25s;
+                        text-shadow: 0 0 18px #fff;
+                    }
+    
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+    
+                & .infoContainer__btnVermas {
+                    font-family: var(--ff_subtitulo-general);
+                    display: inline-block;
+                    width: 14rem;
+                    height: 2.6em;
+                    line-height: 2.5em;
+                    overflow: hidden;
+                    font-size: var(--sz_letraSemigrande);
+                    z-index: 1;
+                    color: var(--color_negro);
+                    border: none;
+                    border-radius: 6px;
+                    position: relative;
+                    cursor: var(--cursor_pointer);
+                    transition: .1s all ease-in;
+                    background-color: rgba(255, 255, 255, .5);
+                    backdrop-filter: blur(5px);
+    
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        background: var(--color_negro);
+                        width: 350px;
+                        height: 130px;
+                        z-index: -1;
+                        border-radius: 50%;
+                        top: 100%;
+                        left: 100%;
+                        transition: .3s all;
+                    }
+    
+                    &:hover {
+                        color: var(--color_blanco);
+    
+                        &::before {
+                            top: -30px;
+                            left: -30px;
+                        }
+                    }
+    
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+        }
+
+        & .imgMuestra {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: calc(100vw - 45vw - (2.5rem * 2));
+            height: calc(100vh - 7rem - 10px);
+
+            & .imgMuestra__img {
+                width: 27rem;
+                height: 27rem;
             }
         }
     }

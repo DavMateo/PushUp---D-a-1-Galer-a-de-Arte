@@ -1,0 +1,11 @@
+@keyframes arrow {
+    0% {
+      margin-left: 0;
+    }
+    50% {
+      margin-left: 10px;
+    }
+    100% {
+        margin-left: 0;
+    }
+  }

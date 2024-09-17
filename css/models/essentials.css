@@ -12,4 +12,5 @@ html {
     font-family: var(--ff_estandar);
     background-color: var(--bg_color);
     color: var(--bg_textColor);
+    overflow-x: hidden;
 }
